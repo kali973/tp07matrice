@@ -1,6 +1,6 @@
 #include <iostream>
 
-#define TAB_MAX 5
+#define TAB_MAX 3
 #define TRUE    1
 
 
@@ -27,8 +27,8 @@ int main(int argc, char *argv[]) {
                 for (ligne = 0; ligne < TAB_MAX; ligne++) {
                     int colonne;
                     for (colonne = 0; colonne < TAB_MAX; colonne++) {
-                        matrice01[ligne][colonne] = rand() % 99 + 1;
-                        matrice02[ligne][colonne] = rand() % 99 + 1;
+                        matrice01[ligne][colonne] = rand() % 10 + 1;
+                        matrice02[ligne][colonne] = rand() % 10 + 1;
                     }
                 }
 
