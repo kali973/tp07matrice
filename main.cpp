@@ -3,8 +3,8 @@
 #define TAB_MAX 3
 #define TRUE    1
 
-
 int main(int argc, char *argv[]) {
+
     char rep[100];
     int nombreLigne, nombreColonne, ligne;
     int matrice01[TAB_MAX][TAB_MAX] = {0}, matrice02[TAB_MAX][TAB_MAX] = {0}, resultat[TAB_MAX][TAB_MAX] = {0};
