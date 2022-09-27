@@ -3,4 +3,4 @@ project(tp07matrice)
 
 set(CMAKE_CXX_STANDARD 14)
 
-add_executable(tp07matrice main.cpp)
+add_executable(tp07matrice main.c)
