@@ -1,6 +1,9 @@
-#include <iostream>
+#include <stdio.h>
+#include <stdlib.h>
+#include <time.h>
 
-#define TAB_MAX 3
+#define TAB_MAX 2
+
 #define TRUE    1
 
 int main(int argc, char *argv[]) {
@@ -100,15 +103,14 @@ int main(int argc, char *argv[]) {
 
             case 'm':
             case 'M':
-
-                for (int row = 0; row < TAB_MAX; row++) {
-                    for (int col = 0; col < TAB_MAX; col++) {
-
-                        for (int inner = 0; inner < TAB_MAX - 1; inner++) {
-                            resultat[row][col] += matrice01[row][inner] * matrice02[inner][col];
+                for (int i = 0; i < TAB_MAX; i++) {
+                    for (int j = 0; j < TAB_MAX; j++) {
+                        for (int k = 0; k < TAB_MAX; k++) {
+                            resultat[i][j] += matrice01[i][k] * matrice02[k][j];
                         }
                     }
                 }
+
                 printf("Matrice résultat\n");
 
                 printf("+");
