@@ -9,12 +9,12 @@
 int main(int argc, char *argv[]) {
 
     char rep[100];
-    int nombreLigne, nombreColonne, ligne;
+    int nombreLigne, nombreColonne;
     int matrice01[TAB_MAX][TAB_MAX] = {0}, matrice02[TAB_MAX][TAB_MAX] = {0}, resultat[TAB_MAX][TAB_MAX] = {0};
 
     while (TRUE) {
 
-        printf("\nIndiquez l'operation a effectuer [Quit/Aff/Mult/lire/Rand]: ");
+        printf("\nIndiquez l'operation a effectuer [Quit/Aff/Mult/lire/Random]: ");
         scanf("%s", rep);
 
         switch (rep[0]) {
@@ -34,7 +34,7 @@ int main(int argc, char *argv[]) {
                         matrice02[ligne][colonne] = rand() % 10 + 1;
                     }
                 }
-
+                printf("\nImplementation matrice A and B done , make option A to show them\n");
                 break;
             case 'a':
             case 'A':
