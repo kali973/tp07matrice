@@ -2,7 +2,7 @@
 #include <stdlib.h>
 #include <time.h>
 
-#define TAB_MAX 5
+#define TAB_MAX 3
 
 #define TRUE    1
 
@@ -99,6 +99,15 @@ int main(int argc, char *argv[]) {
 
             case 'm':
             case 'M':
+                // Initialisation matrice résultat
+                for (int i = 0; i < TAB_MAX; i++) {
+                    for (int j = 0; j < TAB_MAX; j++) {
+                        for (int k = 0; k < TAB_MAX; k++) {
+                            resultat[i][j] = 0;
+                        }
+                    }
+                }
+                // Multiplication matrice A * matrice B
                 for (int i = 0; i < TAB_MAX; i++) {
                     for (int j = 0; j < TAB_MAX; j++) {
                         for (int k = 0; k < TAB_MAX; k++) {
