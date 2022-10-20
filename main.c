@@ -2,19 +2,18 @@
 #include <stdlib.h>
 #include <time.h>
 
-#define TAB_MAX 2
+#define TAB_MAX 5
 
 #define TRUE    1
 
 int main(int argc, char *argv[]) {
 
     char rep[100];
-    int nombreLigne, nombreColonne;
     int matrice01[TAB_MAX][TAB_MAX] = {0}, matrice02[TAB_MAX][TAB_MAX] = {0}, resultat[TAB_MAX][TAB_MAX] = {0};
 
     while (TRUE) {
 
-        printf("\nIndiquez l'operation a effectuer [Quit/Aff/Mult/lire/Random]: ");
+        printf("\nIndiquez l'opération a effectuer [Quit/Aff/Mult/lire/Random] => ");
         scanf("%s", rep);
 
         switch (rep[0]) {
@@ -82,20 +81,17 @@ int main(int argc, char *argv[]) {
             case 'l':
             case 'L':
 
-                printf("Entrez le nombre de lignes et colonnes pour la première matrice:\n");
-                scanf("%d%d", &nombreLigne, &nombreColonne);
-
-                printf("Entrez les éléments de la première matrice\n");
+                printf("Entrez les éléments de la première matrice carrée de dimension : %d \n", TAB_MAX);
                 int colonne;
-                for (ligne = 0; ligne < nombreLigne; ligne++) {
-                    for (colonne = 0; colonne < nombreColonne; colonne++) {
+                for (ligne = 0; ligne < TAB_MAX; ligne++) {
+                    for (colonne = 0; colonne < TAB_MAX; colonne++) {
                         scanf("%d", &matrice01[ligne][colonne]);
                     }
                 }
 
-                printf("Entrez les éléments de la deuxième matrice\n");
-                for (ligne = 0; ligne < nombreLigne; ligne++) {
-                    for (colonne = 0; colonne < nombreColonne; colonne++) {
+                printf("Entrez les éléments de la première matrice carrée de dimension : %d \n", TAB_MAX);
+                for (ligne = 0; ligne < TAB_MAX; ligne++) {
+                    for (colonne = 0; colonne < TAB_MAX; colonne++) {
                         scanf("%d", &matrice02[ligne][colonne]);
                     }
                 }
